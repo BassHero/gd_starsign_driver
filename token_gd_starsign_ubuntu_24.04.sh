@@ -40,7 +40,7 @@
 	wget $libjpeg62_turbo $libssl1_1 $libtiff5 $libwebp6 $libwxbase3_0 $libwxgtk3_0 $safesign_dl
 
 # Instalando as bibliotecas que não tem nos repositórios padrão do ubuntu
-	sudo dpkg -i $libwebp6_ $libtiff5_ $libjpeg62_turbo_ $libwxbase3_0_ $libwxgtk3_0_ $libssl1_1
+	sudo dpkg -i $libwebp6_ $libtiff5_ $libjpeg62_turbo_ $libwxbase3_0_ $libwxgtk3_0_ $libssl1_1_
 
 # Descompactando e instalando o safesign
 	#unzip -o $safesign_zip
