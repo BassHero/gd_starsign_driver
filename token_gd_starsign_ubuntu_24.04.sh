@@ -11,7 +11,7 @@
 	# libjpeg62_turbo_=libjpeg62-turbo_2.1.5-2+b2_amd64.deb
 	libjpeg62_turbo_=libjpeg62-turbo_2.1.5-3_amd64.deb
 	libssl1_1_=libssl1.1_1.1.1f-1ubuntu2.22_amd64.deb	
-	libtiff5_=libtiff5_4.1.0+git191117-2ubuntu0.20.04.12_amd64.deb
+	libtiff5_=libtiff5_4.1.0+git191117-2ubuntu0.20.04.13_amd64.deb
 	libwebp6_=libwebp6_0.6.1-2ubuntu0.20.04.3_amd64.deb
 	libwxbase3_0_=libwxbase3.0-0v5_3.0.5.1+dfsg-4_amd64.deb
 	libwxgtk3_0_=libwxgtk3.0-gtk3-0v5_3.0.5.1+dfsg-4_amd64.deb
