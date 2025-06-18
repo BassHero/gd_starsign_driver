@@ -9,8 +9,8 @@
 # libs que não tem nos repositórios padrão do Ubuntu
 # Variáveis dos arquivos .deb
 	# libjpeg62_turbo_=libjpeg62-turbo_2.1.5-2+b2_amd64.deb
-	libjpeg62_turbo_=libjpeg62-turbo_2.1.5-3_amd64.deb
-	libssl1_1_=libssl1.1_1.1.1f-1ubuntu2.23_amd64.deb	
+	libjpeg62_turbo_=libjpeg62-turbo_2.1.5-4_amd64.deb
+	libssl1_1_=libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb	
 	libtiff5_=libtiff5_4.1.0+git191117-2ubuntu0.20.04.14_amd64.deb
 	libwebp6_=libwebp6_0.6.1-2ubuntu0.20.04.3_amd64.deb
 	libwxbase3_0_=libwxbase3.0-0v5_3.0.5.1+dfsg-4_amd64.deb
@@ -37,7 +37,7 @@
 
 # Baixando as bibliotecas que não tem nos repositórios padrão do ubuntu
 	mkdir ~/Downloads/token_gd_starsign && cd ~/Downloads/token_gd_starsign
-	wget $libjpeg62_turbo $libssl1_1 $libtiff5 $libwebp6 $libwxbase3_0 $libwxgtk3_0 $safesign_dl
+	wget -nc $libjpeg62_turbo $libssl1_1 $libtiff5 $libwebp6 $libwxbase3_0 $libwxgtk3_0 $safesign_dl
 
 # Instalando as bibliotecas que não tem nos repositórios padrão do ubuntu
 	sudo dpkg -i $libwebp6_ $libtiff5_ $libjpeg62_turbo_ $libwxbase3_0_ $libwxgtk3_0_ $libssl1_1_
