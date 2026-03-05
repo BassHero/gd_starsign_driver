@@ -84,7 +84,7 @@ remover_arquivos () {
 
 # Mensagem inicial de execução do instalador.
 
-echo "########################### Safesign Linux Installer ##########################
+echo '########################### Safesign Linux Installer ##########################
 Instalador do Safesign Identity Client para token GD Starsign no Ubuntu 24.04
 	
 Página oficial do Safesign: https://safesign.gdamericadosul.com.br/
@@ -100,24 +100,30 @@ Caso queria me fazer uma doação:
 	Bitcoin: bc1qx2mm6d4uxt72czrwpk8xh73vavzt2kmxcuwx7l
 	Bitcoin(lighting):
 		lnbc1p5clyfppp5q5fgduca0gnkluypaq7dj3nlmdvnkwvg5z8rv2lagrda4as79q3qdqqcqzzsxqrrsssp56jmjfydk8hs2erm4d02k0mc9kye79slmtdnhxk64m37zmwhy3mhs9qxpqysgq9v20kv6ympgtpz3uzmkfclzf3nszvysj8d46gxqwv7ew9vy0jlf8sv0sw4jx4mwxce0z8adgjk4tycs9cuc36qe6vejzcp9xy00rq2cpnu32c3
-"
+'
 
-read -p "Deseja instalar o Safesign? [s/n] " RESPOSTA1
-read -p "Deseja remover os arquivos baixados após a instalação? [s/n] " RESPOSTA2
+read -p 'Deseja instalar o Safesign? [s/n] ' RESPOSTA1
 
-if [ "$RESPOSTA1" == "s" ]; then	
+if [ "$RESPOSTA1" == "s" ]; then
+
 	instalar_safesing
-	echo "A instalação foi concluída com sucesso"
+	echo 'A instalação foi concluída com sucesso.'	
+	read -p 'Deseja remover os arquivos baixados após a instalação? [s/n] ' RESPOSTA2
+		
+	if [ "$RESPOSTA2" == "s" ]; then
+			
+		remover_arquivos 
+		echo 'Os arquivos utilizados na instalação foram removidos.'
+	else
+		echo 'Nenhum arquivo baixado foi removido.'
+		echo 'Caso queira removê-los por aqui, execute o instalador novamente' 
+		echo 'e responda "n" a segunda pergunta.'
+	fi	
 else
-	echo "Execute o instalador novamente caso necessário."
+	echo 'Nenhuma instalação foi feita.'
+	echo 'Execute o script novamente caso queira instalar o certificado digital.'
 fi
 
-if [ "$RESPOSTA2" == "s" ]; then	
-	remover_arquivos 
-	echo "Os arquivos utilizados na instalação foram removidos"
-else
-	echo "Nenhum arquivo baixado foi removido."
-	echo "Execute o instalador novamente caso queira removê-los por aqui."
-fi
+
 
 
