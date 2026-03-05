@@ -3,29 +3,29 @@
 ###########################################################
 ################# Safesign Linux Installer ################
 ###########################################################
-	
+#
 # Instalador do Certificado digital no Ubuntu e derivados.
-	
+#
 # Página oficial de download do Safesign:
 # https://safesign.gdamericadosul.com.br/
-	
+#
 # Github deste Programa:
 # https://github.com/BassHero/gd_starsign_driver
-	
+#
 # Autor: Renato Ramalho
 # email para contato: renatoramalho1986@gmail.com
-	
+#
 # Caso queria me fazer uma doação:
-
+#
 # PIX: renatoramalho232@gmail.com
-
+#
 # Bitcoin(bipatag): $renatoramalho
-
+#
 # Bitcoin: bc1qx2mm6d4uxt72czrwpk8xh73vavzt2kmxcuwx7l
-
+#
 # Bitcoin(lighting):
 	# lnbc1p5clyfppp5q5fgduca0gnkluypaq7dj3nlmdvnkwvg5z8rv2lagrda4as79q3qdqqcqzzsxqrrsssp56jmjfydk8hs2erm4d02k0mc9kye79slmtdnhxk64m37zmwhy3mhs9qxpqysgq9v20kv6ympgtpz3uzmkfclzf3nszvysj8d46gxqwv7ew9vy0jlf8sv0sw4jx4mwxce0z8adgjk4tycs9cuc36qe6vejzcp9xy00rq2cpnu32c3
-	
+#
 ###########################################################
 ###########################################################
 ###########################################################
@@ -51,7 +51,7 @@ LIBWXGTK_URL=http://ftp.us.debian.org/debian/pool/main/w/wxwidgets3.0/$LIBWXGTK
 LIBSSL1_URL=http://security.debian.org/debian-security/pool/updates/main/o/openssl/$LIBSSL1
 SAFESIGN_URL=https://safesign.gdamericadosul.com.br/content/$SAFESIGN
 
-# Funções
+# Funções:
 
 instalar_safesing () {
 
@@ -64,15 +64,15 @@ instalar_safesing () {
 	# Instalando as bibliotecas baixadas.
 	sudo dpkg -i $LIBWEBP6 $LIBTIFF5 $LIBJPEG62_TURBO $LIBWXBASE $LIBWXGTK $LIBSSL1
 
-	# Extraindo e instalando o safesign
+	# Extraindo e instalando o safesign.
 	unrar x $SAFESIGN
 	sudo dpkg -i $SAFESIGN_DEB	
 
-	# Iniciando e habilitando o serviço pcscd
+	# Iniciando e habilitando o serviço pcscd.
 	systemctl start pcscd.service
 	systemctl enable pcscd.service
 
-	# Iniciando o token e verificando se foi reconhecido
+	# Iniciando o token e verificando se foi reconhecido.
 	tokenadmin
 }
 
@@ -82,41 +82,24 @@ remover_arquivos () {
 	rm $LIBWEBP6 $LIBTIFF5 $LIBJPEG62_TURBO $LIBWXBASE $LIBWXGTK $LIBSSL1 $SAFESIGN $SAFESIGN_DEB
 }
 
-# Mensagem inicial de Execução
+# Mensagem inicial de execução do instalador.
 
-echo "
-	###########################################################
-	################# Safesign Linux Installer ################
-	###########################################################
+echo "########################### Safesign Linux Installer ##########################
+Instalador do Safesign Identity Client para token GD Starsign no Ubuntu 24.04
 	
-	Instalador do Certificado digital no Ubuntu e derivados.
-	
-	Página oficial de download do Safesign:
-	https://safesign.gdamericadosul.com.br/
-	
-	Github deste Programa:
-	https://github.com/BassHero/gd_starsign_driver
-	
-	Autor: Renato Ramalho
-	email para contato: renatoramalho1986@gmail.com
-	
-	Caso queria me fazer uma doação:
+Página oficial do Safesign: https://safesign.gdamericadosul.com.br/
 
-	PIX: renatoramalho232@gmail.com  
+Repositório deste instalador: https://github.com/BassHero/gd_starsign_driver
+	
+Autor: Renato Ramalho / email para contato: renatoramalho1986@gmail.com
+	
+Caso queria me fazer uma doação:
 
+	PIX: renatoramalho232@gmail.com
 	Bitcoin(bipatag): $renatoramalho
-
 	Bitcoin: bc1qx2mm6d4uxt72czrwpk8xh73vavzt2kmxcuwx7l
-
 	Bitcoin(lighting):
 		lnbc1p5clyfppp5q5fgduca0gnkluypaq7dj3nlmdvnkwvg5z8rv2lagrda4as79q3qdqqcqzzsxqrrsssp56jmjfydk8hs2erm4d02k0mc9kye79slmtdnhxk64m37zmwhy3mhs9qxpqysgq9v20kv6ympgtpz3uzmkfclzf3nszvysj8d46gxqwv7ew9vy0jlf8sv0sw4jx4mwxce0z8adgjk4tycs9cuc36qe6vejzcp9xy00rq2cpnu32c3
-
-===========================================================================
-
-	
-	###########################################################
-	###########################################################
-	###########################################################
 "
 
 read -p "Deseja instalar o Safesign? [s/n] " RESPOSTA1
@@ -124,14 +107,14 @@ read -p "Deseja remover os arquivos baixados após a instalação? [s/n] " RESPO
 
 if [ "$RESPOSTA1" == "s" ]; then	
 	instalar_safesing
-	echo 
+	echo "A instalação foi concluída com sucesso"
 else
 	echo "Execute o instalador novamente caso necessário."
 fi
 
 if [ "$RESPOSTA2" == "s" ]; then	
 	remover_arquivos 
-	echo "Os arquivos foram removidos"
+	echo "Os arquivos utilizados na instalação foram removidos"
 else
 	echo "Nenhum arquivo baixado foi removido."
 	echo "Execute o instalador novamente caso queira removê-los por aqui."
