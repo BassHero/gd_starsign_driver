@@ -34,7 +34,7 @@
 
 LIBWEBP6=libwebp6_0.6.1-2.1+deb11u2_amd64.deb
 LIBTIFF5=libtiff5_4.2.0-1+deb11u7_amd64.deb
-LIBJPEG62=libjpeg62-turbo_2.1.5-4_amd64.deb
+LIBJPEG62_TURBO=libjpeg62-turbo_2.1.5-4_amd64.deb
 LIBWXBASE=libwxbase3.0-0v5_3.0.5.1+dfsg-2_amd64.deb
 LIBWXGTK=libwxgtk3.0-gtk3-0v5_3.0.5.1+dfsg-2_amd64.deb
 LIBSSL1=libssl1.1_1.1.1w-0+deb11u5_amd64.deb
@@ -45,7 +45,7 @@ SAFESIGN_DEB=SafeSign_IC_Standard_Linux_3.7.0.0_AET.000_ub2004_x86_64.deb
 
 LIBWEBP6_URL=http://ftp.us.debian.org/debian/pool/main/libw/libwebp/$LIBWEBP6
 LIBTIFF5_URL=http://security.debian.org/debian-security/pool/updates/main/t/tiff/$LIBTIFF5
-LIBJPEG62_TURBO_URL=http://ftp.us.debian.org/debian/pool/main/libj/libjpeg-turbo/$LIBJPEG62
+LIBJPEG62_TURBO_URL=http://ftp.us.debian.org/debian/pool/main/libj/libjpeg-turbo/$LIBJPEG62_TURBO
 LIBWXBASE_URL=http://ftp.us.debian.org/debian/pool/main/w/wxwidgets3.0/$LIBWXBASE
 LIBWXGTK_URL=http://ftp.us.debian.org/debian/pool/main/w/wxwidgets3.0/$LIBWXGTK
 LIBSSL1_URL=http://security.debian.org/debian-security/pool/updates/main/o/openssl/$LIBSSL1
