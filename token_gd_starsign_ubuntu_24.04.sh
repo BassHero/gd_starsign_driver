@@ -62,7 +62,7 @@ instalar_safesing () {
 	wget -nc $LIBWEBP6_URL $LIBTIFF5_URL $LIBJPEG62_TURBO_URL $LIBWXBASE_URL $LIBWXGTK_URL $LIBSSL1_URL $SAFESIGN_URL
 
 	# Instalando as bibliotecas baixadas.
-	sudo dpkg -i $LIBWEBP6 $LIBTIFF5 $LIBJPEG62_TURBO $LIBWXBASE $LIBWXGTK $LIBSSL1
+	sudo dpkg -i $LIBWEBP6 $LIBTIFF5 "$LIBJPEG62_TURBO" $LIBWXBASE $LIBWXGTK $LIBSSL1
 
 	# Extraindo e instalando o safesign.
 	unrar x $SAFESIGN
@@ -79,7 +79,7 @@ instalar_safesing () {
 remover_arquivos () {
 
 	# Deletando arquivos baixados.
-	rm $LIBWEBP6 $LIBTIFF5 $LIBJPEG62_TURBO $LIBWXBASE $LIBWXGTK $LIBSSL1 $SAFESIGN $SAFESIGN_DEB
+	rm $LIBWEBP6 $LIBTIFF5 "$LIBJPEG62_TURBO" $LIBWXBASE $LIBWXGTK $LIBSSL1 $SAFESIGN $SAFESIGN_DEB
 }
 
 # Mensagem inicial de execução do instalador.
